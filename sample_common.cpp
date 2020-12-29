@@ -398,8 +398,6 @@ void sampleCommonUpdate()
 
     time_t spend = s - start;
 
-    print("%ld", spend);
-
     if (spend > 300)
     {
         g_game_done = true;
