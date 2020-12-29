@@ -1,3 +1,4 @@
+#include <ctime>
 #include "sample_common.h"
 
 bool g_use_vsync = 1;
@@ -35,7 +36,7 @@ Keyboard *g_keyboards[2]; // Duel uses 2 keyboards
 Pad *g_pad;
 Mouse *g_mouse;
 
-clock_t start;
+time_t start;
 
 void (*g_game_connect_callback)(RemoteHead *rh, Client *cl);
 void (*g_remote_keyboard_callback)(Client *cl, int kc, int act);
@@ -295,7 +296,7 @@ void sampleCommonInit(int argc, char **argv, const char *title)
     g_ascii_deck->setTexture(g_ascii_atlas);
     g_ascii_deck->setSize(32, 32, 8, 8);
 
-    start = clock();
+    start = time(NULL);
 }
 
 int getFirstClientIndex()
@@ -393,11 +394,13 @@ void sampleCommonUpdate()
         }
     }
 
-    clock_t s = clock();
+    time_t s = time(NULL);
 
-    double spend = (double)(s - start) / CLOCKS_PER_SEC;
+    time_t spend = s - start;
 
-    if (spend > 30.0f)
+    print("%ld", spend);
+
+    if (spend > 300)
     {
         g_game_done = true;
     }
