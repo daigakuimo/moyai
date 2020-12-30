@@ -58,7 +58,7 @@ void minimumUpdate()
     {
     }
 
-    int *temp = new int[1000];
+    int *temp = new int[100];
 }
 
 SAMPLE_COMMON_MAIN_FUNCTION(minimumInit, minimumUpdate, "minimum");
