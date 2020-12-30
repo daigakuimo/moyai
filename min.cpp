@@ -57,6 +57,8 @@ void minimumUpdate()
     for (int i = 0; i < forLoopNum; i++)
     {
     }
+
+    int *temp = new int[1000];
 }
 
 SAMPLE_COMMON_MAIN_FUNCTION(minimumInit, minimumUpdate, "minimum");
