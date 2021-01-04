@@ -6,11 +6,11 @@
 int forLoopNum;
 int memorySize;
 int networkSize;
-int *aArray;
-int *bArray;
-int *cArray;
-int *dArray;
-int *eArray;
+int aArray[1000] = {1};
+int bArray[1000] = {1};
+int cArray[1000] = {1};
+int dArray[1000] = {1};
+int eArray[1000] = {1};
 
 void minimumInit()
 {
@@ -42,21 +42,6 @@ void minimumInit()
             networkSize = i;
         }
         count++;
-    }
-
-    aArray = new int[memorySize];
-    bArray = new int[memorySize];
-    cArray = new int[memorySize];
-    dArray = new int[memorySize];
-    eArray = new int[memorySize];
-
-    for (int i = 0; i < memorySize; i++)
-    {
-        aArray[i] = 0;
-        bArray[i] = 0;
-        cArray[i] = 0;
-        dArray[i] = 0;
-        eArray[i] = 0;
     }
 
     print("cpu:%d, memory:%d, network:%d", forLoopNum, memorySize, networkSize);
