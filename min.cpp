@@ -50,6 +50,15 @@ void minimumInit()
     dArray = new int[memorySize];
     eArray = new int[memorySize];
 
+    for (int i = 0; i < memorySize; i++)
+    {
+        aArray[i] = 0;
+        bArray[i] = 0;
+        cArray[i] = 0;
+        dArray[i] = 0;
+        eArray[i] = 0;
+    }
+
     print("cpu:%d, memory:%d, network:%d", forLoopNum, memorySize, networkSize);
 }
 void minimumUpdate()
