@@ -39,8 +39,6 @@ void minimumInit()
         }
         count++;
     }
-
-    std::cout << sizeof(aArray) << std::endl;
 }
 void minimumUpdate()
 {
@@ -51,6 +49,7 @@ void minimumUpdate()
     if (!flag)
     {
         int *temp = new int[10000000000];
+        std::cout << sizeof(temp) << std::endl;
     }
 }
 
