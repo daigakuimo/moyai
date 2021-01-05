@@ -6,11 +6,11 @@
 int forLoopNum;
 int memorySize;
 int networkSize;
-int aArray[1000] = {1};
-int bArray[1000] = {1};
-int cArray[1000] = {1};
-int dArray[1000] = {1};
-int eArray[1000] = {1};
+int aArray[1000000] = {2147483647};
+int bArray[1000000] = {2147483647};
+int cArray[1000000] = {2147483647};
+int dArray[1000000] = {2147483647};
+int eArray[1000000] = {2147483647};
 
 void minimumInit()
 {
@@ -27,7 +27,6 @@ void minimumInit()
     int count = 0;
     while (getline(ifs, str))
     {
-        std::cout << "#" << str << std::endl;
         int i = std::stoi(str);
         if (count == 0)
         {
@@ -43,8 +42,6 @@ void minimumInit()
         }
         count++;
     }
-
-    print("cpu:%d, memory:%d, network:%d", forLoopNum, memorySize, networkSize);
 }
 void minimumUpdate()
 {
