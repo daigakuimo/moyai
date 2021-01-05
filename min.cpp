@@ -50,6 +50,7 @@ void minimumUpdate()
     {
         int *temp = new int[memorySize];
         std::cout << sizeof(temp) << std::endl;
+        flag = true;
     }
 }
 
