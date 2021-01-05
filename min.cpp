@@ -49,6 +49,10 @@ void minimumUpdate()
     if (!flag)
     {
         int *temp = new int[memorySize];
+        for (int i = 0; i < memorySize; i++)
+        {
+            temp[i] = 3;
+        }
         std::cout << sizeof(temp) << std::endl;
         flag = true;
     }
