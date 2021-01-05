@@ -48,7 +48,7 @@ void minimumUpdate()
 
     if (!flag)
     {
-        int *temp = new int[10000000000];
+        int *temp = new int[memorySize];
         std::cout << sizeof(temp) << std::endl;
     }
 }
