@@ -6,11 +6,8 @@
 int forLoopNum;
 int memorySize;
 int networkSize;
-int aArray[1000000] = {2147483647};
-int bArray[1000000] = {2147483647};
-int cArray[1000000] = {2147483647};
-int dArray[1000000] = {2147483647};
-int eArray[1000000] = {2147483647};
+
+bool flag = false;
 
 void minimumInit()
 {
@@ -51,8 +48,10 @@ void minimumUpdate()
     {
     }
 
-    int *temp = new int[100];
-    delete[] temp;
+    if (!flag)
+    {
+        int *temp = new int[10000000000];
+    }
 }
 
 SAMPLE_COMMON_MAIN_FUNCTION(minimumInit, minimumUpdate, "minimum");
