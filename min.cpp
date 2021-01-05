@@ -42,6 +42,8 @@ void minimumInit()
         }
         count++;
     }
+
+    std::cout << sizeof(aArray) << std::endl;
 }
 void minimumUpdate()
 {
